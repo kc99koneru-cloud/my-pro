@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Docker Full Stack App</title>
+</head>
+<body>
+
+<h1>Frontend</h1>
+
+<button onclick="loadMessage()">Get Backend Message</button>
+
+<h2 id="result"></h2>
+
+<script>
+
+async function loadMessage() {
+
+const response = await fetch("http://localhost:5000/api/message");
+
+const data = await response.json();
+
+document.getElementById("result").innerHTML = data.message;
+
+}
+
+</script>
+
+</body>
+</html>
