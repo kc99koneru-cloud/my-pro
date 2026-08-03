@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "yourdockerhubusername/backend-app"
+        IMAGE_NAME = "kk/backend-app"
         IMAGE_TAG = "latest"
         CONTAINER_NAME = "backend-container"
     }
